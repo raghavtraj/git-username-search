@@ -1,0 +1,9 @@
+<div class="main">
+    <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+        <input matInput placeholder="Git User name" formControlName="username">
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Search</button>
+    </form> 
+    <app-card-details [data]='data' [showSpinner]='showSpinner'></app-card-details>
+</div>

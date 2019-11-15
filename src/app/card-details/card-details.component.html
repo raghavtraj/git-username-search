@@ -1,0 +1,14 @@
+<mat-spinner *ngIf=showSpinner></mat-spinner>
+<mat-card  *ngIf=data>
+  <mat-card-header>
+    <mat-card-title>{{data.name}}</mat-card-title>
+    <mat-card-subtitle>{{data.location}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{data.avatar_url}} alt="">
+  <mat-card-content>
+    <p> {{data.bio}}</p>
+    <a href={{data.html_url}} target="_blank">Goto Page</a><br>
+    <label for="">Followers : <b>{{data.followers}}</b></label>
+  </mat-card-content>
+</mat-card>
+<div *ngIf="!data && !showSpinner"> Enter the git Hub Username   </div>
